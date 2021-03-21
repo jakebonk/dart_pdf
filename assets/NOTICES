@@ -4970,6 +4970,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --------------------------------------------------------------------------------
 charcode
 glob
+http
 http_multi_server
 http_parser
 matcher
