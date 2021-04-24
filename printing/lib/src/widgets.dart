@@ -20,7 +20,7 @@ part of printing;
 class PdfDoc extends Document {
   /// Wrapper for a [Document] with zlib compression enabled by default
   PdfDoc(
-      {bool compress = true,
+      {
       PdfPageMode pageMode = PdfPageMode.none,
       Theme theme,
       String title,
@@ -29,8 +29,7 @@ class PdfDoc extends Document {
       String subject,
       String keywords,
       String producer})
-      : super(
-          compress: compress,
+      : super(       
           pageMode: pageMode,
           theme: theme,
           title: title,
