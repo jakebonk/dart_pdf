@@ -22,7 +22,6 @@ class PdfDoc extends Document {
   PdfDoc(
       {
       PdfPageMode pageMode = PdfPageMode.none,
-      Theme theme,
       String title,
       String author,
       String creator,
@@ -31,7 +30,6 @@ class PdfDoc extends Document {
       String producer})
       : super(       
           pageMode: pageMode,
-          theme: theme,
           title: title,
           author: author,
           creator: creator,

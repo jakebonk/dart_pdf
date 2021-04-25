@@ -74,20 +74,20 @@ mixin Printing {
   /// Displays a platform popup to share the Pdf document to another application
   static Future<void> sharePdf(
       {@Deprecated('use bytes with document.save()') PdfDocument document,
-      List<int> bytes,
+      Uint8List bytes,
       String filename,
       Rect bounds}) async {
     assert(document != null || bytes != null);
     assert(!(document == null && bytes == null));
 
     if (document != null) {
-      bytes = document.save();
+      bytes = await document.save();
     }
 
     bounds ??= Rect.fromCircle(center: Offset.zero, radius: 10);
 
     final Map<String, dynamic> params = <String, dynamic>{
-      'doc': Uint8List.fromList(bytes),
+      'doc': bytes,
       'name': filename,
       'x': bounds.left,
       'y': bounds.top,
